@@ -23,7 +23,7 @@ export async function activate (context: vscode.ExtensionContext) {
 
 	setInterval(async () => {
 		await createMessage(breakTime)
-	}, (userInterval + breakTime));
+	}, (userInterval));
 	
 
 	// The command has been defined in the package.json file

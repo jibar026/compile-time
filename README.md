@@ -14,8 +14,8 @@ At any time you can change your interval preferrence and break duration. You jus
 
 For example run `Shift+CMD+P` on macOS or `Shift+Ctrl+P` on (Windows and Linux) and type:
 
-- `takeabreak.set.interval.alert`: will set your alert interval
-- `takeabreak.set.interval.break`: will set your break time (5 minutes by default)
+- `compiletime.set.interval.alert`: will set your alert interval
+- `compiletime.set.interval.break`: will set your break time (5 minutes by default)
 
 ## Known Issues
 
