@@ -6,7 +6,7 @@ As a programmer, I very often find myself sitting for hours on end without takin
 
 Take a Break will remind you to take a brak with funny geek quotes in an interval you define the first time you use the extension.
 
-![myfile](images/alert.gif)
+![alert.gif](images/alert.gif)
 
 ## Extension Settings
 
