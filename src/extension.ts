@@ -66,7 +66,7 @@ async function setBreakInterval (store: vscode.Memento) {
 	// The code you place here will be executed every time your command is executed
 	let userInterval = await vscode.window.showInputBox({
 		ignoreFocusOut: true,
-		prompt: 'Hi 👋 from Take a Break! How long(min) your break will last? ☕️',
+		prompt: 'Hi 👋 from Compile Time! How long(min) your break will last? ☕️',
 	})
 
 	if (userInterval !== undefined){
