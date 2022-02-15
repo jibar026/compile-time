@@ -3,7 +3,7 @@
 	"displayName": "Compile Time",
 	"description": "Funny break reminder for the geek folks",
 	"icon": "images/cup.png",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"repository": {
 		"type": "git",
     	"url": "https://github.com/jibar026/takeabreak"
@@ -15,7 +15,7 @@
 		"Other"
 	],
 	"activationEvents": [
-        "*"
+        "onStartupFinished"
 	],
 	"main": "./dist/extension.js",
 	"publisher": "jibar026",

@@ -23,18 +23,18 @@ export async function activate (context: vscode.ExtensionContext) {
 
 	setInterval(async () => {
 		await createMessage(breakTime)
-	}, (userInterval));
+	}, (userInterval + breakTime));
 	
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
 	let setAlert = vscode.commands.registerCommand('compiletime.set.interval.alert', () => setAlertInterval(store).then(()=>{
-		userInterval = store.get('interval.alert') as number
+		userInterval = store.get('interval.alert') as number * 60000
 	}));
 
 	let setBreakTime = vscode.commands.registerCommand('compiletime.set.interval.break', () => setBreakInterval(store).then(()=>{
-		breakTime = store.get('interval.break') as number
+		breakTime = store.get('interval.break') as number * 60000
 	}));
 
 	context.subscriptions.push(setAlert);
@@ -53,7 +53,7 @@ async function setAlertInterval (store: vscode.Memento) {
 		prompt: 'Hi 👋 from Compile Time! How often(min) you want to take a break? ☕️',
 	})
 
-	if (userInterval != undefined){
+	if (userInterval !== undefined){
 		interval =  userInterval as unknown as number
 	}
 	await store.update('interval.alert',interval)
@@ -69,7 +69,7 @@ async function setBreakInterval (store: vscode.Memento) {
 		prompt: 'Hi 👋 from Take a Break! How long(min) your break will last? ☕️',
 	})
 
-	if (userInterval != undefined){
+	if (userInterval !== undefined){
 		interval =  userInterval as unknown as number
 	}
 	await store.update('interval.break',interval)
