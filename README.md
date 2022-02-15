@@ -1,10 +1,10 @@
-# Take a Break README
+# Compile Time README
 
-As a programmer, I very often find myself sitting for hours on end without taking a break or worse, without drinking water. That's why I decided to create **Take a Break**, an extension to help you and me to remember take those crucial breaks that are good for our physical and mental health.
+As a programmer, I very often find myself sitting for hours on end without taking a break or worse, without drinking water. That's why I decided to create **Compile Time**, an extension to help you and me to remember take those crucial breaks that are good for our physical and mental health.
 
 ## Features
 
-Take a Break will remind you to take a brak with funny geek quotes in an interval you define the first time you use the extension.
+Compile Time will remind you to take a brak with funny geek quotes in an interval you define the first time you use the extension.
 
 ![alert.gif](images/alert.gif)
 
@@ -25,6 +25,6 @@ For example run `Shift+CMD+P` on macOS or `Shift+Ctrl+P` on (Windows and Linux) 
 
 ### 1.0.0
 
-Initial release of Take a Break
+Initial release of Compile Time
 
 **Enjoy!**

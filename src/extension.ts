@@ -29,11 +29,11 @@ export async function activate (context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	let setAlert = vscode.commands.registerCommand('takeabreak.set.interval.alert', () => setAlertInterval(store).then(()=>{
+	let setAlert = vscode.commands.registerCommand('compiletime.set.interval.alert', () => setAlertInterval(store).then(()=>{
 		userInterval = store.get('interval.alert') as number
 	}));
 
-	let setBreakTime = vscode.commands.registerCommand('takeabreak.set.interval.break', () => setBreakInterval(store).then(()=>{
+	let setBreakTime = vscode.commands.registerCommand('compiletime.set.interval.break', () => setBreakInterval(store).then(()=>{
 		breakTime = store.get('interval.break') as number
 	}));
 
@@ -50,7 +50,7 @@ async function setAlertInterval (store: vscode.Memento) {
 	// The code you place here will be executed every time your command is executed
 	let userInterval = await vscode.window.showInputBox({
 		ignoreFocusOut: true,
-		prompt: 'Hi 👋 from Take a Break! How often(min) you want to take a break? ☕️',
+		prompt: 'Hi 👋 from Compile Time! How often(min) you want to take a break? ☕️',
 	})
 
 	if (userInterval != undefined){

@@ -1,6 +1,6 @@
 {
-  "name": "takeabreak",
-	"displayName": "TakeaBreak",
+  "name": "compile-time",
+	"displayName": "Compile Time",
 	"description": "Funny break reminder for the geek folks",
 	"icon": "images/cup.png",
 	"version": "0.0.1",
@@ -26,12 +26,12 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "takeabreak.set.interval.alert",
-				"title": "Take a Break: Set break reminder interval"
+				"command": "compiletime.set.interval.alert",
+				"title": "Compile Time: Set break reminder interval"
 			},
 			{
-				"command": "takeabreak.set.interval.break",
-				"title": "Take a Break: Set a break duration"
+				"command": "compiletime.set.interval.break",
+				"title": "Compile Time: Set a break duration"
 			}
 		]
 	},
