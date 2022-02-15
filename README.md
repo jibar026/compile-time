@@ -23,7 +23,11 @@ For example run `Shift+CMD+P` on macOS or `Shift+Ctrl+P` on (Windows and Linux) 
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.3
+
+- Fix a bug that was causing the extension timer to break once the user changed a interval using any command.
+
+### 0.0.1
 
 Initial release of Compile Time
 
