@@ -23,6 +23,10 @@ For example run `Shift+CMD+P` on macOS or `Shift+Ctrl+P` on (Windows and Linux) 
 
 ## Release Notes
 
+### 0.0.4
+
+- Feature: Now the interval will only be activated if the current window state is focused.
+
 ### 0.0.3
 
 - Fix a bug that was causing the extension timer to break once the user changed a interval using any command.

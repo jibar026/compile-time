@@ -3,7 +3,7 @@
 	"displayName": "Compile Time",
 	"description": "Funny break reminder for the geek folks",
 	"icon": "images/cup.png",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"repository": {
 		"type": "git",
     	"url": "https://github.com/jibar026/takeabreak"
@@ -60,6 +60,6 @@
 		"ts-loader": "^9.2.6",
 		"webpack": "^5.66.0",
 		"webpack-cli": "^4.9.1",
-		"@vscode/test-electron": "^2.0.3"
+		"@vscode/test-electron": "^2.1.3"
 	}
 }

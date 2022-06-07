@@ -1,6 +1,5 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
-import { privateEncrypt } from 'crypto';
 import * as vscode from 'vscode';
 import { ProgressLocation, window } from 'vscode';
 
@@ -21,9 +20,34 @@ export async function activate (context: vscode.ExtensionContext) {
 	}
 	let breakTime = store.get('interval.break') as number * 60000 // convert to milliseconds
 
-	setInterval(async () => {
+	let myInterval:NodeJS.Timeout = setInterval(async () => {
 		await createMessage(breakTime)
 	}, (userInterval + breakTime));
+	let timeout:NodeJS.Timeout;
+	let focused = true;
+	const cooldown = 20000;
+	window.onDidChangeWindowState(state => {
+		clearTimeout(timeout)
+		timeout = setTimeout(() => {
+				if (state.focused != focused){
+					// console.log('state change', state.focused);
+					// Only start timer interval if window is active
+					if (state.focused) {
+						myInterval = setInterval(async () => {
+							await createMessage(breakTime)
+						}, (userInterval + breakTime));
+					}
+					else{
+						clearInterval(myInterval)
+					}
+					focused = state.focused;	
+			 	}
+			}, cooldown);
+		
+		
+	  });
+
+	
 	
 
 	// The command has been defined in the package.json file
@@ -77,10 +101,6 @@ async function setBreakInterval (store: vscode.Memento) {
 	await vscode.window.showInformationMessage('Yey! your break time ⏰ is now set for ' + interval +' min.');
 }
 
-
-
-
-
 function createMessage(breakTime:number){
 	window.withProgress({
 		location: ProgressLocation.Notification,
@@ -101,7 +121,7 @@ function createMessage(breakTime:number){
 			if (percentage >= 100) {
 				clearInterval(interval);
 			}
-		}, (breakTime/100));
+		}, (Math.floor(breakTime / 100)));
 
 		return sleep(breakTime)
 	});
